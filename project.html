@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strength Training</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+      color: darkslategray;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 10px 5px;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: lighter;
+    }
+    h3 {
+      font-weight: lighter;
+      font-size: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 5.5px;
+      margin-bottom: 15px;
+    }
+    p {
+      text-align: center;
+      line-height: 1.8;
+      margin: 0 0 10px;
+      font-size: 18px;
+      max-width: 50%;
+      display: inline;
+    }
+
+    button {
+      display: block;
+      margin: auto;
+      font-size: 25px;
+      color: black;
+      padding: 12px 7px;
+      border-radius: 10px;
+      border: none;
+      background-color: radial-gradient(
+        1091px at 106.5% 111.5%,
+        rgb(250, 246, 213) 0.1%,
+        rgb(218, 147, 93) 42.2%,
+        rgb(137, 86, 67) 74.3%,
+        rgb(67, 39, 39) 100.2%
+      );
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    button:hover {
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      background-color: transparent;
+      color: white;
+    }
+
+    .learn-more {
+      display: block;
+      margin: 10px;
+      text-decoration: none;
+      font-size: 15px;
+      color: darkslategray;
+    }
+
+    .learn-more:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 15px;
+      padding: 30px 60px;
+      background: linear-gradient(
+        -180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>STRENGTH TRAINING</h1>
+      <h2>also known as <em>resistance training!</em></h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/669/original/BenefitsOfStrengthTrainingForWomencdc853cb74a233646df40500d0cf977b.jpg?1707034512"
+        alt="alternating squat"
+        width="85%"
+      />
+
+      <p>
+        Strength training, also known as weight training or resistance training,
+        involves the performance of physical exercises that are designed to
+        improve strength and endurance. It is often associated with the lifting
+        of weights. It can also incorporate a variety of training techniques
+        such as bodyweight exercises, isometrics, and plyometrics.
+      </p>
+      <br />
+      <a
+        class="learn-more"
+        href="https://en.wikipedia.org/wiki/Strength_training"
+        target="blank"
+      >
+        Learn more from Wikipedia
+      </a>
+      <hr />
+      <br />
+
+      <button>Get Strength Training Plan</button>
+
+      <h3>This page was built by Infinity</h3>
+    </div>
+    <script>
+      function Plan() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let country = prompt("Which country are your from?");
+
+        country = country.toLowerCase().trim();
+
+        if (country === "south africa") {
+          alert("Check your emails, " + name + ". Happy training!!");
+        } else {
+          alert(
+            "Sorry, " +
+              name +
+              ". The Strength Training Plan is not available in your country yet."
+          );
+        }
+      }
+      let planButton = document.querySelector("button");
+      planButton.addEventListener("click", Plan);
+    </script>
+  </body>
+</html>
